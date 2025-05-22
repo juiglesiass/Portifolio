@@ -185,7 +185,7 @@ body{
     font-size: 4rem;
     color: #1b5b67;
     padding: 20px;
-    margin-top: 20px;
+    top: 70px;
 }
 
 .cards-sites{
@@ -197,68 +197,64 @@ body{
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    top: 70px;
+    padding-bottom: 50px;
 }
 
-.site1{
-    background-image: url(img/food.png);
-}
-
-.site2{
-    background-image: url(img/clothes.png);
-}
-
-.site3{
-    background-image: url(img/kanban.png);
-}
-
-.site4{
-    background-image: url(img/questionario.png);
-}
-
-.site1, .site2, .site3, .site4 {
+.card{
+    position: relative;
     width: 400px;
-    height: 250px;
+}
+
+.img-card{
+    width: 100%;
+    display: block;
+    margin: auto;
     border-radius: 30px;
-    cursor: pointer;
+}
+
+.info-card{
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    top: 0;
+    left: 0;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.info-card{
     visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    cursor: pointer;
+    gap: 2px;
     }
 
 .text-card{
     text-decoration: none;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600;
-}
-
-.card:hover{
-    filter: brightness(0.7);
-    transform: scale(1.05);
-    transition: filter 0.2s ease-in-out;
-    .info-card{
-        visibility: visible;
-    }
 }
 
 .btn-card{
     background-color: #ffffff;
     border-radius: 20px;
+    font-size: 12px;
     cursor: pointer;
     border: none;
     width: 80px;
-    height: 25px;
+    height: 22px;
     align-items: center;
     margin-top: 15px;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: filter 0.3s;
+    .info-card{
+        visibility: visible;
+        transition: 0.5s;
+    }
 }

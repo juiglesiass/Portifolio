@@ -225,10 +225,10 @@ body{
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    background: rgba(0, 0, 0, 0.6);
     border-radius: 30px;
     cursor: pointer;
     gap: 2px;
+    background: rgba(0, 0, 0, 0.5);
     }
 
 .text-card{
@@ -252,9 +252,9 @@ body{
 
 .card:hover{
     transform: scale(1.05);
-    transition: filter 0.3s;
+    transition: 0.4s;
     .info-card{
-        visibility: visible;
         transition: 0.5s;
+        visibility: visible;
     }
 }

@@ -8,7 +8,6 @@
 }
 
 body{
-    background-color: #1e7382;
     color: aliceblue;
 }
 
@@ -51,6 +50,7 @@ body{
     display: flex;
     align-items: center;
     padding: 0 10%;
+    background-color: #1e7382;
 }
 
 .início-content{
@@ -132,7 +132,7 @@ body{
 }
 
 .sobre-content {
-    width: 50%;
+    width: 900px;
 }
 
 .sobre-content p {
@@ -172,15 +172,24 @@ body{
 .portifolio{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
     background-color: #ffffff;
-    color: #ffffff;
     width: 100%;
-    height: 100vh;
+    height: 500px;
+}
+
+.portifolio-titulo{
+    position: relative;
+    text-align: center;
+    font-size: 4rem;
+    color: #1b5b67;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 .cards-sites{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +215,7 @@ body{
     background-image: url(img/questionario.png);
 }
 
-.card .site1, .card .site2, .card .site3, .card .site4 {
+.site1, .site2, .site3, .site4 {
     width: 400px;
     height: 250px;
     border-radius: 30px;
@@ -216,13 +225,29 @@ body{
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info-card{
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+.text-card{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .card:hover{
-    filter: brightness(0.9);
+    filter: brightness(0.7);
     transform: scale(1.05);
-    transition: filter 0.5s ease;
-    .txt-card{
+    transition: filter 0.2s ease-in-out;
+    .info-card{
         visibility: visible;
     }
 }
